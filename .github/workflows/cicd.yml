@@ -45,4 +45,19 @@ jobs:
         run: sudo apt install gitleaks -y
       - name: GitLeaks code scan
         run: gitleaks detect source . -r gitleaks-reports.json -f json
+
+  Test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      - name: Run Test
+        run: mvn test
           
