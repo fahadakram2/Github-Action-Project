@@ -21,6 +21,8 @@ jobs:
       - name: Build with Maven
         run: mvn compile
 
+        
+
   Security-checks:
     runs-on: self-hosted
 
@@ -38,5 +40,5 @@ jobs:
 
       - name: Trivy FS scan
         run: trivy fs --format table -o fs-report.json .
-        
+
           
