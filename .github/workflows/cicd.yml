@@ -48,6 +48,7 @@ jobs:
 
   Test:
     runs-on: self-hosted
+    needs: Security-checks
 
     steps:
       - name: Checkout Code
