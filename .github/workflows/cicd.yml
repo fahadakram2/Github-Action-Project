@@ -127,3 +127,4 @@ jobs:
           push: true
           tags: ${{ vars.DOCKER_USER }}/DevOps-Shack-app:latest
           
+          
