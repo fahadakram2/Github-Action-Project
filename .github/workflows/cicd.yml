@@ -118,8 +118,6 @@ jobs:
         with:
           username: fahad813
           password: F@di12345
-
-            -
       - name: Build and push
         uses: docker/build-push-action@v7
         with:
